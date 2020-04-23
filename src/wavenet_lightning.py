@@ -31,7 +31,6 @@ class WaveNetModule(pl.LightningModule):
         """Embedding"""
         self.embedding_dim = hparams.emb_dim
         self.embedding = nn.Embedding(self.num_classes, self.embedding_dim)
-        self.embedding.weight = nn.Parameter(torch.eye(self.embedding_dim), requires_grad=False)
 
         """Metrics"""
         self.metrics = MetricsCalculator(["accuracy", "precision", "recall", "f1"])
