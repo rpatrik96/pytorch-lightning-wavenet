@@ -1,0 +1,6 @@
+# cache and logs
+src/__pycache__/
+src/lightning_logs/*
+
+# exclude raw data
+data/
